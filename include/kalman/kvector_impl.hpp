@@ -4,7 +4,7 @@
 // Copyright (C) 2004        Vincent Zalzal, Sylvain Marleau
 // Copyright (C) 2001, 2004  Richard Gourdeau
 // Copyright (C) 2004        GRPR and DGE's Automation sector
-//                           École Polytechnique de Montréal
+//                           ï¿½cole Polytechnique de Montrï¿½al
 //
 // Code adapted from algorithms presented in :
 //      Bierman, G. J. "Factorization Methods for Discrete Sequential
@@ -130,7 +130,8 @@ namespace Kalman {
     if (DBG) {
       if (i < BEG || i >= n_ + BEG) {
         KOSTRINGSTREAM oss;
-        oss << "Trying to access element " << i << " not included in ["
+        oss << "VectorIndexOutOfBoundsError: Trying to access element " << i
+            << " not in the range of ["
             << BEG << ", " << n_ + BEG - 1 << "]." KEND_OF_STREAM;
         throw OutOfBoundError(oss.str());
       }
@@ -147,7 +148,8 @@ namespace Kalman {
     if (DBG) {
       if (i < BEG || i >= n_ + BEG) {
         KOSTRINGSTREAM oss;
-        oss << "Trying to access element " << i << " not included in ["
+        oss << "VectorIndexOutOfBoundsError: Trying to access element " << i
+            << " not in the range of ["
             << BEG << ", " << n_ + BEG - 1 << "]." KEND_OF_STREAM;
         throw OutOfBoundError(oss.str());
       }

@@ -4,7 +4,7 @@
 #include "kalman/ekfilter.hpp"
 
 
-class cPlaneEKF : public Kalman::EKFilter<double,1,false,true,false> {
+class cPlaneEKF : public Kalman::EKFilter<double,1,false,true,true> {
 public:
 	cPlaneEKF();
 

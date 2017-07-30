@@ -80,13 +80,13 @@ int testExample() {
 
 	if (dataInput.fail())
 	{
-		cout<<"Unable to open input file ! current path: " << cCurrentPath <<endl;
+		cout<<"Unable to open input file ! current path(2): " << cCurrentPath <<endl;
 		return 0;
 	}
 
 	if (dataOutput.fail())
 	{
-		cout<<"Unable to open output file!"<<endl;
+		cout<<"Unable to open output file!(3)"<<endl;
 		return 0;
 	}
 

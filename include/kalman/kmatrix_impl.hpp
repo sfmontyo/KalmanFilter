@@ -4,7 +4,7 @@
 // Copyright (C) 2004        Vincent Zalzal, Sylvain Marleau
 // Copyright (C) 2001, 2004  Richard Gourdeau
 // Copyright (C) 2004        GRPR and DGE's Automation sector
-//                           École Polytechnique de Montréal
+//                           ï¿½cole Polytechnique de Montrï¿½al
 //
 // Code adapted from algorithms presented in :
 //      Bierman, G. J. "Factorization Methods for Discrete Sequential
@@ -196,8 +196,8 @@ namespace Kalman {
     if (DBG) {
       if (i < BEG || i >= m_ + BEG || j < BEG || j >= n_ + BEG) {
         KOSTRINGSTREAM oss;
-        oss << "Trying to access element (" << i << ", " << j 
-            << ") not included in [" << BEG << ", " << m_ + BEG - 1 << "][" 
+        oss << "MatrixIndexOutOfBoundsError: Trying to access element (" << i << ", " << j
+            << ") not in the range of [" << BEG << ", " << m_ + BEG - 1 << "]["
             << BEG << ", " << n_ + BEG - 1 << "]." KEND_OF_STREAM;
         throw OutOfBoundError(oss.str());
       }
@@ -216,8 +216,8 @@ namespace Kalman {
     if (DBG) {
       if (i < BEG || i >= m_ + BEG || j < BEG || j >= n_ + BEG) {
         KOSTRINGSTREAM oss;
-        oss << "Trying to access element (" << i << ", " << j 
-            << ") not included in [" << BEG << ", " << m_ + BEG - 1 << "][" 
+        oss << "MatrixIndexOutOfBoundsError: Trying to access element (" << i << ", " << j
+            << ") not in the range of [" << BEG << ", " << m_ + BEG - 1 << "]["
             << BEG << ", " << n_ + BEG - 1 << "]." KEND_OF_STREAM;
         throw OutOfBoundError(oss.str());
       }

@@ -9,6 +9,12 @@ brew cask install texmaker
 UNIX/Linux case :
 sudo apt-get install cmake doxygen graphviz
 
+Windows
+
+install cmake for windows. https://cmake.org/download/
+install doxygen for windows: http://www.doxygen.org/download.html
+  Note: redirects to http://www.stack.nl/~dimitri/doxygen/download.html
+install http://www.graphviz.org/Download_windows.php
 
 --
 Building
@@ -22,4 +28,13 @@ A small static library (libkalman.a) will be installed in /usr/local/lib. A
 directory named 'kalman' containing all necessary include files will be 
 installed in /usr/local/include. If you wish to install elsewhere, please 
 modify the top variables in 'makefile'.
+
+---
+Running the examples
+After building the examples using make all from with the cmake build folder
+go to the subdirectory
+cd ${ROOT}/examples/src
+../../${CMAKE_BUILD_DIRECTORY}/examples/kalmanExamples
+
+This will run the examples.
 

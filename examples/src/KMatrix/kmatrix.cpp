@@ -90,13 +90,15 @@ void test() {
     try {
       M4(100,100) = T(7.0);
     } catch(OutOfBoundError& e) {
-      cout << e.what() << endl;
+      cout << "Test Passed: Testing out of bounds access. Got exception: "
+           << e.what() << endl;
     }
 
     try {
       cout << ref(100,100) << endl;
     } catch(OutOfBoundError& e) {
-      cout << e.what() << endl;
+      cout << "Test Passed: Testing out of bounds access. Got exception: "
+           << e.what() << endl;
     }
 
   }
