@@ -1,0 +1,25 @@
+MacOS X installation
+For mac, you need the following
+brew install cmake
+brew install doxygen
+brew install graphviz # for dot
+brew cask install mactext # for the latex output in the doc
+brew cask install texmaker
+
+UNIX/Linux case :
+sudo apt-get install cmake doxygen graphviz
+
+
+--
+Building
+Run cmake to create the cmake build subdirectory. In the cmake build
+directory,
+
+make all
+sudo make install
+
+A small static library (libkalman.a) will be installed in /usr/local/lib. A 
+directory named 'kalman' containing all necessary include files will be 
+installed in /usr/local/include. If you wish to install elsewhere, please 
+modify the top variables in 'makefile'.
+
