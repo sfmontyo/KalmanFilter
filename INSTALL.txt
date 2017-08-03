@@ -1,3 +1,4 @@
+================== MAC OS SETUP ===================
 MacOS X installation
 For mac, you need the following
 brew install cmake
@@ -6,20 +7,15 @@ brew install graphviz # for dot
 brew cask install mactext # for the latex output in the doc
 brew cask install texmaker
 
+================== Linux  =========================
 UNIX/Linux case :
 sudo apt-get install cmake doxygen graphviz
+install latex
 
-Windows
-
-install cmake for windows. https://cmake.org/download/
-install doxygen for windows: http://www.doxygen.org/download.html
-  Note: redirects to http://www.stack.nl/~dimitri/doxygen/download.html
-install http://www.graphviz.org/Download_windows.php
-
---
+=========== Building on Mac OS/Linux  =============
 Building
 Run cmake to create the cmake build subdirectory. In the cmake build
-directory,
+directory.
 
 make all
 sudo make install
@@ -29,7 +25,6 @@ directory named 'kalman' containing all necessary include files will be
 installed in /usr/local/include. If you wish to install elsewhere, please 
 modify the top variables in 'makefile'.
 
----
 Running the examples
 After building the examples using make all from with the cmake build folder
 go to the subdirectory
@@ -37,4 +32,49 @@ cd ${ROOT}/examples/src
 ../../${CMAKE_BUILD_DIRECTORY}/examples/kalmanExamples
 
 This will run the examples.
+
+================== Windows ========================
+Windows
+
+1. Install Git for Windows
+   Goto: https://git-for-windows.github.io/
+   download and install.
+
+2. Install MinGW64
+   See: http://mingw-w64.yaxm.org
+   a. Goto the downloads section and start the "Mingw-builds" Windows version.
+   b. download and run the MinGW-W64 installer.
+   c. In settings, select the "x86_64" Architecture.
+   It will install into C:\Program Files\mingw-w64\x86_64-7.1.0-posix-seh-rt_v5-rev1\mingw64 . Remember this location for the CLion install.
+
+3. Install Doxygen for Windows
+ a. Goto http://www.doxygen.org/download.html and install
+
+4. Install graphviz for windows
+ a. Goto http://www.graphviz.org/Download_windows.php
+
+5. Install Latex for Windows
+ a. Goto https://miktex.org/download (or https://www.latex-project.org/get/)
+ 
+6. Install CLion for Windows
+   WARNING: You should install either MinGW or Cygwin BEFORE you install
+   clion.
+  a. For tutorials and guides, see:
+     https://www.jetbrains.com/help/clion/quick-tutorial-on-configuring-clion-on-windows.html
+     https://www.jetbrains.com/help/clion/quick-start-guide.html
+   
+  b. Goto https://www.jetbrains.com/clion/download/#section=windows and
+  install CLion
+  c. Select the MINGW Environment option.
+  NOTE: If you used the MinGW basic installation, CLion should find
+  your installation directory automatically. HOWEVER, if it does not find
+  the "Git For Windows" installation folder. Click the "..." button
+  and navigate to %ProgramFiles%\Git\mingw64 . Add that folder as the
+  root.
+  
+7. Run CLion and use it to download the repo and build the project.
+
+====================================================
+
+---
 
