@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstring>
 
 using namespace Kalman;
 
@@ -60,10 +61,10 @@ int MFile::read(const char * filename)
       while(!file.eof())
 	{
 
-	  tmpindex = strstr(tmpline, "%");
+	  tmpindex = std::strstr(tmpline, "%");
 
 	  // Remove comment
-	  if (tmpindex!=NULL)
+	  if (tmpindex!= nullptr)
 	    tmpindex[0]=0;
 
 	  tmpstring = tmpline;

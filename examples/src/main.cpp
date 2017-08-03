@@ -1,4 +1,6 @@
 #include <iostream>
+#include <functional>
+
 int testKfilter();
 int testExample();
 int kmatrixTest();
