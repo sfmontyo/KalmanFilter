@@ -1,3 +1,5 @@
+# KFilter - Free C++ Extended Kalman Filter Library 
+
 This code is a modified version of the source code found at
 http://kalman.sourceforge.net/
 
@@ -7,7 +9,11 @@ comments.
 For installation instructions, read INSTALL.txt.
 
 To use the kalman classes :
+
+```
 #include "kalman/ekfilter.hpp"
+
+```
 
 Don't forget to link the .a (-lkalman) on UNIX/Linux or the .lib on Windows. 
 The include path must be accessible (nothing to do on UNIX/Linux, set the 
